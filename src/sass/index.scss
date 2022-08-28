@@ -1,2 +1,12 @@
-@import './common';
-@import './example';
+// @import './common';
+// @import './example';
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-gap: 30px;
+}
+.photo-card {
+    flex-basis: calc((100% - 30px) / 5);
+  }
