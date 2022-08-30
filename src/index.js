@@ -37,6 +37,8 @@ function onSearch (event) {
 }
 // WORK
     function buildForSearch (images) {
+      let totalPage = images.totalHits/40;
+      
       if (images.totalHits === 0) {
           Notiflix.Notify.failure(
               'Sorry, there are no images matching your search query. Please try again.',
@@ -66,6 +68,9 @@ function onSearch (event) {
           lightbox.refresh();
           loadMoreBtn.classList.remove('is-hidden');
       };
+      if (page > totalPage) {
+          loadMoreBtn.classList.add('is-hidden');
+    }
       } ;
 
 
